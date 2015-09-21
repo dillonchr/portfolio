@@ -1,0 +1,18 @@
+{
+  "name": "design-portfolio",
+  "version": "0.0.0",
+  "authors": [
+    "Dillon Christensen <dillon.christensen@kailbrate.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jsonlylightbox": "~0.5.1"
+  }
+}

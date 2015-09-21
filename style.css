@@ -1,0 +1,161 @@
+.fill {
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.fill.inline {
+    display: inline-block;
+}
+
+.green {
+    color: #00B856;
+}
+
+.green.fill {
+    color: white;
+    background-color: #00B856;
+}
+
+.orange {
+    color: #F26843;
+}
+
+.orange.fill {
+    color: white;
+    background-color: #F26843;
+}
+
+.purple {
+    color: #5E5B9C;
+}
+
+.purple.fill {
+    color: white;
+    background-color: #5E5B9C;
+}
+
+.yellow {
+    color: #FFC537;
+}
+
+.yellow.fill {
+    color: black;
+    background-color: #FFC537;
+}
+
+.tan {
+    color: #D9C9BA;
+}
+
+.tan.fill {
+    color: black;
+    background-color: #D9C9BA;
+}
+
+.light-gray {
+    color: #F4F4F3;
+}
+
+.light-gray.fill {
+    color: black;
+    background-color: #F4F4F3;
+}
+
+.gray {
+    color: #EDEAEA;
+}
+
+.gray.fill {
+    color: black;
+    background-color: #EDEAEA;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+header {
+    overflow: auto;
+}
+
+header .pseudo-logo {
+    text-align: center;
+}
+
+header .box {
+    border: solid 3px #FFC537;
+    display: inline-block;
+    text-align: center;
+    padding: 0.25em;
+    font-size: 2em;
+}
+
+header .name {
+    text-align: center;
+    font-size: 2em;
+    margin: 50px auto;
+}
+
+header .info div {
+    float: left;
+    width: 33%;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+header .info div:nth-child(2) {
+    text-align: center;
+}
+
+header .info div:last-child {
+    text-align: right;
+}
+
+section {
+    display: block;
+    margin: 150px auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    overflow: auto;
+    border-top: solid 1px #333;
+}
+
+section header {
+    font-weight: bold;
+    font-size: 2em;
+    margin: 20px;
+}
+
+section:nth-child(odd) header {
+    text-align: right;
+}
+
+section:nth-child(odd) > div.thumbs,
+section:nth-child(even) > div.description {
+    float: left;
+}
+
+section:nth-child(odd) > div.description,
+section:nth-child(even) > div.thumbs {
+    float: right;
+}
+
+section .description {
+    width: 66%;
+}
+
+section .thumbs {
+    width: 33%;
+}
+
+section .thumbs img {
+    max-width: 45%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
