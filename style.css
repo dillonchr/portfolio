@@ -1,78 +1,8 @@
-.fill {
-    padding: 10px;
-    margin: 10px auto;
-}
-
-.fill.inline {
-    display: inline-block;
-}
-
-.green {
-    color: #00B856;
-}
-
-.green.fill {
-    color: white;
-    background-color: #00B856;
-}
-
-.orange {
-    color: #F26843;
-}
-
-.orange.fill {
-    color: white;
-    background-color: #F26843;
-}
-
-.purple {
-    color: #5E5B9C;
-}
-
-.purple.fill {
-    color: white;
-    background-color: #5E5B9C;
-}
-
-.yellow {
-    color: #FFC537;
-}
-
-.yellow.fill {
-    color: black;
-    background-color: #FFC537;
-}
-
-.tan {
-    color: #D9C9BA;
-}
-
-.tan.fill {
-    color: black;
-    background-color: #D9C9BA;
-}
-
-.light-gray {
-    color: #F4F4F3;
-}
-
-.light-gray.fill {
-    color: black;
-    background-color: #F4F4F3;
-}
-
-.gray {
-    color: #EDEAEA;
-}
-
-.gray.fill {
-    color: black;
-    background-color: #EDEAEA;
-}
-
 body {
-    font-family: 'Lato', sans-serif;
+    background: black;
+    font-family: 'Cabin Sketch', sans-serif;
     font-size: 18px;
+    color: white;
 }
 
 .container {
@@ -80,56 +10,69 @@ body {
     margin: auto;
 }
 
-header {
-    overflow: auto;
+.divider {
+    display: block;
+    margin: 100px auto;
 }
 
-header .pseudo-logo {
-    text-align: center;
+.logo {
+    display: inline;
 }
 
-header .box {
-    border: solid 3px #FFC537;
-    display: inline-block;
-    text-align: center;
-    padding: 0.25em;
-    font-size: 2em;
+.contact-info {
+    float: right;
+    display: block;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
 }
 
-header .name {
-    text-align: center;
-    font-size: 2em;
-    margin: 50px auto;
+.email-link {
+    color: white;
 }
 
-header .info div {
-    float: left;
-    width: 33%;
-    font-size: 0.9em;
-    font-weight: bold;
+.email-link:hover {
+    color: cyan;
 }
 
-header .info div:nth-child(2) {
-    text-align: center;
-}
-
-header .info div:last-child {
-    text-align: right;
+.email-link:active {
+    color: magenta;
 }
 
 section {
     display: block;
-    margin: 150px auto;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    margin: 100px auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
     overflow: auto;
-    border-top: solid 1px #333;
+    border-top: solid 1px cyan;
+}
+
+section *::selection {
+    background: magenta;
+}
+
+section:nth-child(even) {
+    border-top-color: magenta;
+}
+
+section:nth-child(even) *::selection {
+    background: cyan;
+}
+
+section:nth-child(2) {
+    border-top: none;
+    padding-top: 0;
+}
+
+section#tipcalc {
+    padding-bottom: 0;
 }
 
 section header {
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 2em;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 section:nth-child(odd) header {
@@ -147,15 +90,75 @@ section:nth-child(even) > div.thumbs {
 }
 
 section .description {
-    width: 66%;
-}
-
-section .thumbs {
     width: 33%;
 }
 
+section .thumbs {
+    width: 66%;
+}
+
 section .thumbs img {
-    max-width: 45%;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 28%;
+    border: solid 1px white;
+}
+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1080px) {
+    .logo {
+        display: block;
+        margin: auto;
+        clear: both;
+        width: 100%;
+    }
+
+    .contact-info {
+        float: none;
+        text-align: center;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .divider {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    section {
+        margin: 50px auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    section header {
+        font-size: 1.5em;
+    }
+
+    section .description {
+        width: auto;
+    }
+
+    section .thumbs {
+        width: auto;
+    }
+
+    section .thumbs img {
+        max-width: 48%;
+        border: solid 1px white;
+    }
+
+    section:nth-child(odd) header, {
+        text-align: left;
+    }
+
+    section:nth-child(odd) > div.thumbs,
+    section:nth-child(even) > div.description,
+    section:nth-child(odd) > div.description,
+    section:nth-child(even) > div.thumbs {
+        float: none;
+    }
 }
 
